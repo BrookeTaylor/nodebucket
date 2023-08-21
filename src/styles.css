@@ -1,4 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+/**
+    Title: Nodebucket
+    Arthur: Professor Krasso
+    Date: 08/20/2023
+    Modified By: Brooks
+    Description: styles css
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Risque&display=swap');
+
+h1 {
+  font-family: 'Risque', sans-serif;
+}
+
+body {
+  background-color: #5d5d5d !important;
+  color: white !important;
+}
+
 
 .text-underline-hover {
   text-decoration: none;
@@ -19,7 +37,7 @@
 /* Mobile view ports */
 @media only screen and (max-device-width: 576px) {
   .dropdown-menu {
-    background-color: #212529 !important;
+    background-color: #0F1D4A !important;
     color: rgba(255, 255, 255, 0.55) !important;
   }
 
@@ -29,7 +47,7 @@
 
   .dropdown-item:hover {
     cursor: pointer;
-    background-color: #212529 !important;
+    background-color: #0F1D4A !important;
     color: rgba(255, 255, 255, 0.75) !important;
   }
 
@@ -37,3 +55,5 @@
     color: rgba(255, 255, 255, 0.55) !important;
   }
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

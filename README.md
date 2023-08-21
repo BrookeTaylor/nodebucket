@@ -1,6 +1,6 @@
 Title: nodebucket  
 Author: Professor Krasso  
-Date: 08/08/2023  
+Date: 08/20/2023  
 Description: Task management app using the MEAN stack.  
   
 https://github.com/buwebdev/web-450/tree/master  
@@ -16,35 +16,25 @@ https://github.com/buwebdev/web-450/tree/master
 ![ORD](src/assets/nodebucketORD.png)
 
     {
-        "employees": [
+      "employees": [
+        {
+          "empId": 1007,
+          "firstName": "Ludwig van",
+          "lastName": "Beethoven",
+          "toDo": [
             {
-                "empId": 1007,
-                "firstName": "Ludwig van",
-                "lastName": "Beethoven",
-                "tasks": [
-                  {
-                    "toDo": [
-                      {
-                        "title": "task 2",
-                        "description": "Filler task object"
-                      },
-                      {
-                        ...
-                      }
-                    ],
-                    "done": [
-                      {
-                        "title": "task 1",
-                        "description": "Filler task object"
-                      }
-                    ]
-                  }
-
-                ]
-            }, 
-
-            ...
-        ]
+              "title": "task 2",
+              "description": "Filler task object"
+            }
+          ],
+          "done": [
+            {
+              "title": "task 1",
+              "description": "Filler task object"
+            }
+          ]
+        }
+      ]
     }
 
 * Populate the employees collection. In Mongosh > 

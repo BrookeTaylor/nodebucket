@@ -1,0 +1,15 @@
+/**
+    Title: Nodebucket
+    Arthur: Professor Krasso
+    Date: 08/20/2023
+    Modified By: Brooks
+    Description: task component
+*/
+
+h1 {
+  text-align: center;
+}
+
+.card h1 {
+  padding-bottom: 1em;
+}

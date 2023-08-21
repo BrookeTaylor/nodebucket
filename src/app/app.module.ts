@@ -1,7 +1,8 @@
 /**
- * Title: app.module.ts
- * Author: Professor Krasso
- * Date: 8/5/23
+ *  Title: Nodebucket
+ *  Arthur: Professor Krasso
+ *  Date: 08/20/2023
+ *  Description: angular app module
  */
 
 // imports statements
@@ -16,6 +17,9 @@ import { HomeComponent } from './home/home.component';
 import { BaseLayoutComponent } from './layouts/base-layout/base-layout.component';
 import { NavComponent } from './layouts/nav/nav.component';
 import { FooterComponent } from './layouts/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,9 @@ import { FooterComponent } from './layouts/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

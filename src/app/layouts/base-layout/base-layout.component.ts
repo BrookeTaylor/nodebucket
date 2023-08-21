@@ -1,7 +1,8 @@
 /**
- * Title: base-layout.component.ts
- * Author: Professor Krasso
- * Date: 8/5/23
+ *  Title: Nodebucket
+ *  Arthur: Professor Krasso
+ *  Date: 08/20/2023
+ *  Description: base-layout component
  */
 
 // imports statements

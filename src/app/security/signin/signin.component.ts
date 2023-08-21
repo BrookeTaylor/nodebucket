@@ -1,3 +1,10 @@
+/**
+ *  Title: Nodebucket
+ *  Arthur: Professor Krasso
+ *  Date: 08/20/2023
+ *  Description: signin component
+ */
+
 import { Component } from '@angular/core';
 import { SecurityService } from '../security.service';
 import { FormBuilder, Validators } from '@angular/forms';

@@ -1,15 +1,58 @@
+<!--
+  Title: Nodebucket
+  Arthur: Professor Krasso
+  Date: 08/20/2023
+  Description: task component
+-->
+
 <div class="container-fluid pt-2 full-height" style="height: 100vh">
 
   <h1 class="text-center">My Tasks!</h1>
 
   <div class="row mt-5">
 
-  <div class="col-sm-6">
-    ...
+  <div class="col-sm-4">
+
+    <div class="card p-5">
+
+      <h1>New Tasks <span class="material-icons">add_task</span></h1>
+
+      <form>
+
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title">
+
+        <br><br>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description">
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+      </form>
+
+    </div>
+
   </div>
 
-  <div class="col-sm-6">
-    ...
+  <div class="col-sm-4">
+    <div class="card p-5">
+
+      <h1>To Do <span class="material-icons">checklist</span></h1>
+
+
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="card p-5">
+
+      <h1>Done <span class="material-icons">assignment_turned_in</span></h1>
+
+
+    </div>
   </div>
 
 </div>

@@ -1,3 +1,10 @@
+/**
+ *  Title: Nodebucket
+ *  Arthur: Professor Krasso
+ *  Date: 08/20/2023
+ *  Description: auth guard
+ */
+
 import { CanActivateFn, Router } from '@angular/router';
 import { inject } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';

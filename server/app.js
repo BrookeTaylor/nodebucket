@@ -1,12 +1,17 @@
 /**
- * Title: app.js
- * Author: Professor Krasso
- * Date: 8/5/2023
+ *  Title: app.js
+ *  Author: Professor Krasso
+ *  Date: 8/20/2023
+ *  Description: server app
  */
 'use strict'
 
 // Require statements
 const express = require('express')
+
+const swaggerJSDoc = require('swagger-jsdoc');
+const swaggerUI = require('swagger-ui-express');
+
 const createServer = require('http-errors')
 const path = require('path')
 
@@ -14,6 +19,25 @@ const employeeRoute = require('./routes/employee')
 
 // Create the Express app
 const app = express()
+
+
+// Swagger setup
+const options = {
+  definition: {
+    openapi: '3.0.0',
+    info: {
+      title: 'Nodebucket API',
+      version: '1.0.0',
+      description: '',
+    },
+  },
+  apis: ['./swagger.js'],
+};
+const openapiSpecification  = swaggerJSDoc(options);
+
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(openapiSpecification));
+
+
 
 // Configure the app
 app.use(express.json())

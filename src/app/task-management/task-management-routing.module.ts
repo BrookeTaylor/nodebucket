@@ -1,3 +1,10 @@
+/**
+ *  Title: Nodebucket
+ *  Arthur: Professor Krasso
+ *  Date: 08/20/2023
+ *  Description: angular task management-routing module
+ */
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TaskManagementComponent } from './task-management.component';

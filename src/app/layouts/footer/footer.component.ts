@@ -1,17 +1,25 @@
 /**
- * Title: footer.component.ts
- * Author: Professor Krasso
- * Date: 8/5/23
+ *  Title: Nodebucket
+ *  Arthur: Professor Krasso
+ *  Date: 08/20/2023
+ *  Description: footer component
  */
 
 // imports statements
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent {
 
+export class FooterComponent implements OnInit {
+
+  currentYear: number = new Date().getFullYear();
+
+
+  ngOnInit(): void {
+
+  }
 }

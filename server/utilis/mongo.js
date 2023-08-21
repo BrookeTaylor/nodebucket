@@ -1,5 +1,8 @@
 /**
- * Attribution goes here
+ *  Title: Nodebucket
+ *  Arthur: Professor Krasso
+ *  Date: 08/20/2023
+ *  Description: mongo connection
  */
 
 `use strict`
