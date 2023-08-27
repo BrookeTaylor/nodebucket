@@ -3,9 +3,9 @@
     Arthur: Professor Krasso
     Date: 08/27/2023
     Modified By: Brooks
-    Description: home component
+    Description: contact component css
 */
 
-figcaption {
-  text-align: center;
+.map {
+  border: 4px solid #000;
 }

@@ -1,7 +1,7 @@
 /**
  *  Title: Nodebucket
  *  Arthur: Professor Krasso
- *  Date: 08/20/2023
+ *  Date: 08/27/2023
  *  Description: angular app-routing module
  */
 
@@ -11,6 +11,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BaseLayoutComponent } from './layouts/base-layout/base-layout.component';
 import { HomeComponent } from './home/home.component';
 import { authGuard } from './shared/auth.guard';
+import { ContactComponent } from './contact/contact.component';
 
 // routes array with a path, component, and title for each route in the application (e.g. home, about, contact, etc.)
 const routes: Routes = [
@@ -27,6 +28,11 @@ const routes: Routes = [
         path: 'home',
         component: HomeComponent,
         title: 'Nodebucket: Home'
+      },
+      {
+        path: 'contact',
+        component: ContactComponent,
+        title: 'Nodebucket: Contact Us'
       },
       {
         path: 'task-management',

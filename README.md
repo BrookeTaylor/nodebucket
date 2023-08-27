@@ -1,6 +1,6 @@
 Title: nodebucket  
 Author: Professor Krasso  
-Date: 08/20/2023  
+Date: 08/27/2023  
 Description: Task management app using the MEAN stack.  
   
 https://github.com/buwebdev/web-450/tree/master  
