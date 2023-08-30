@@ -1,7 +1,7 @@
 <!--
   Title: Nodebucket
   Arthur: Professor Krasso
-  Date: 08/27/2023
+  Date: 08/29/2023
   Description: task component
 -->
 
@@ -150,6 +150,25 @@
 
                 </div>
               </div>
+
+              <!-- delete button -->
+              <div class="col-sm-6">
+
+                <div class="card-body float-end">
+                  <button class="btn" (click)="deleteTask(item._id ?? '')">
+                    <span class="material-icons">delete</span>
+                  </button>
+                </div>
+
+              </div>
+
+              <!-- only for mobile viewports -->
+              <div class="col-12 d-sm-none d-md-none d-lg-none d-xl-none d-grid gap-2 p-2">
+                <button class="btn btn-secondary" (click)="deleteTask(item._id ?? '')">
+                  Delete
+                </button>
+              </div>
+
             </div>
           </div>
 
@@ -200,6 +219,16 @@
 
                 </div>
               </div>
+
+              <div class="col-sm-6">
+                <div class="card-body float-end">
+                  <button class="btn" (click)="deleteTask(item._id ?? '')">
+                    <span class="material-icons">delete</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- TODO show bootstrap button on mobile viewports -->
             </div>
           </div>
 

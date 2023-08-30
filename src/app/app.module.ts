@@ -1,7 +1,7 @@
 /**
  *  Title: Nodebucket
  *  Arthur: Professor Krasso
- *  Date: 08/27/2023
+ *  Date: 08/29/2023
  *  Description: angular app module
  */
 
@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatIconModule } from '@angular/material/icon';
 import { ContactComponent } from './contact/contact.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ContactComponent } from './contact/contact.component';
     BaseLayoutComponent,
     NavComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

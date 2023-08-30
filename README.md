@@ -43,3 +43,37 @@ https://github.com/buwebdev/web-450/tree/master
 
       db.employees.insertMany([ ... ])
 
+
+
+* Json mongo data
+
+      {
+          "empId": 1007,
+          "firstName": "Ludwig van",
+          "lastName": "Beethoven"
+      },
+      {
+          "empId": 1008,
+          "firstName": "Wolfgang Amadeus",
+          "lastName": "Mozart"
+      },
+      {
+          "empId": 1009,
+          "firstName": "Johannes",
+          "lastName": "Brahms"
+      },
+      {
+          "empId": 1010,
+          "firstName": "Richard",
+          "lastName": "Wagner"
+      },
+      {
+          "empId": 1011,
+          "firstName": "Peter",
+          "lastName": "Tchaikovsky"
+      },
+      {
+          "empId": 1012,
+          "firstName": "Claude",
+          "lastName": "Debussy"
+      }

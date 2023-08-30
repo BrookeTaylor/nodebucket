@@ -1,7 +1,7 @@
 /**
  *  Title: Nodebucket
  *  Arthur: Professor Krasso
- *  Date: 08/27/2023
+ *  Date: 08/29/2023
  *  Description: swagger ui
  */
 
@@ -125,6 +125,111 @@
  *     responses:
  *       '200':
  *         description: Task created successfully
+ *       '400':
+ *         description: Bad Request
+ *       '404':
+ *         description: Not Found
+ *       '500':
+ *         description: Internal Server Error
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * @openapi
+ * /api/employees/{empId}/tasks:
+ *   put:
+ *     tags:
+ *       - Employees
+ *     summary: Update tasks for an employee
+ *     description: API for updating tasks for a specific employee
+ *     parameters:
+ *       - name: empId
+ *         in: path
+ *         required: true
+ *         description: Employee ID
+ *         schema:
+ *           type: integer
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               todo:
+ *                 type: array
+ *                 items:
+ *                   type: object
+ *                   properties:
+ *                     _id:
+ *                       type: string
+ *                     text:
+ *                       type: string
+ *                     category:
+ *                       type: string
+ *               done:
+ *                 type: array
+ *                 items:
+ *                   type: object
+ *                   properties:
+ *                     _id:
+ *                       type: string
+ *                     text:
+ *                       type: string
+ *                     category:
+ *                       type: string
+ *     responses:
+ *       '204':
+ *         description: Updated Task
+ *       '400':
+ *         description: Bad Request
+ *       '404':
+ *         description: Not Found
+ *       '500':
+ *         description: Internal Server Error
+ */
+
+
+
+
+
+
+/**
+ * @openapi
+ * /api/employees/{empId}/tasks/{taskId}:
+ *   delete:
+ *     tags:
+ *       - Employees
+ *     summary: Delete a task for an employee
+ *     description: API for deleting a task for a specific employee
+ *     parameters:
+ *       - name: empId
+ *         in: path
+ *         required: true
+ *         description: Employee ID
+ *         schema:
+ *           type: integer
+ *       - name: taskId
+ *         in: path
+ *         required: true
+ *         description: Task ID
+ *         schema:
+ *           type: string
+ *     responses:
+ *       '204':
+ *         description: Deleted Task
  *       '400':
  *         description: Bad Request
  *       '404':
