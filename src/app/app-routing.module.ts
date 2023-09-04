@@ -1,7 +1,7 @@
 /**
  *  Title: Nodebucket
  *  Arthur: Professor Krasso
- *  Date: 08/29/2023
+ *  Date: 09/03/2023
  *  Description: angular app-routing module
  */
 
@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { authGuard } from './shared/auth.guard';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 // routes array with a path, component, and title for each route in the application (e.g. home, about, contact, etc.)
@@ -37,6 +38,17 @@ const routes: Routes = [
         title: 'Nodebucket: Contact Us'
       },
       {
+        path: 'about',
+        component: AboutUsComponent,
+        title: 'Nodebucket: About Us'
+      },
+      {
+        // 404 page
+        path: 'not-found',
+        component: NotFoundComponent,
+        title: 'Page 404'
+      },
+      {
         path: 'task-management',
         loadChildren: () => import('./task-management/task-management.module').then(m => m.TaskManagementModule),
         canActivate: [authGuard]
@@ -49,8 +61,8 @@ const routes: Routes = [
     loadChildren: () => import('./security/security.module').then(m => m.SecurityModule)
   },
   {
-    // 404 page
-    path: '**', component: NotFoundComponent
+    path: '**',
+    redirectTo: 'not-found'
   }
 ];
 

@@ -1,7 +1,7 @@
 /**
  *  Title: Nodebucket
  *  Arthur: Professor Krasso
- *  Date: 08/29/2023
+ *  Date: 09/03/2023
  *  Description: task component ts
  */
 
@@ -11,6 +11,7 @@ import { TaskService } from '../task.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Employee } from '../employee.interface';
 import { Item } from '../item.interface';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 
 
@@ -118,6 +119,9 @@ export class TasksComponent {
       next: (res: any) => {
         console.log('Task deleted with Id: ' + taskId)
 
+        if (!this.todo) this.todo = []
+        if (!this.done) this.done = []
+
         this.todo = this.todo.filter(t => t._id?.toString() !== taskId)
         this.done = this.done.filter(t => t._id?.toString() !== taskId)
 
@@ -136,9 +140,39 @@ export class TasksComponent {
 
 
 
+  drop(event: CdkDragDrop<any[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex)
+
+      console.log('Moved item in array', event.container.data)
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      )
+
+      console.log('Moved item in array', event.container.data)
+
+      this.updateTaskList(this.empId, this.todo, this.done)
+    }
+  }
 
 
 
+  updateTaskList(empId: number, todo: Item[], done: Item[]) {
+    this.taskService.updateTask(empId, todo, done).subscribe({
+      next: (res: any) => {
+        console.log('Task updated successfully')
+      },
+      error: (err) => {
+        console.log('err', err)
+        this.errorMessage = err.message
+        this.hideAlert()
+      }
+    })
+  }
 
 
 
