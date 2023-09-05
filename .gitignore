@@ -1,9 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # Compiled output
-# Open the .gitignore file and remove /dist
-# /dist
-
+/dist
 /tmp
 /out-tsc
 /bazel-out
