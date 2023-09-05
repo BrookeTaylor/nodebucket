@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng build && node ./bin/www",
     "build": "ng build",
+    "render-deploy": "ng build --configuration=production",
     "server": "nodemon ./bin/www",
     "client": "ng serve --open"
   },
